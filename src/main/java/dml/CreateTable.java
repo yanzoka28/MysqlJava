@@ -16,10 +16,11 @@ public class CreateTable {
         String sql;
         try {
             sql = "CREATE TABLE IF NOT EXISTS PESSOA (" +
-                    "id SERIAL PRIMARY KEY," +
-                    "nome VARCHAR NOT NULL," +
-                    "cpf VARCHAR NOT NULL" +
-                    ");";
+                    "id int AUTO_INCREMENT , " +
+                    "nome VARCHAR(255) NOT NULL, " +
+                    "cpf VARCHAR(255) NOT NULL, " +
+                    "PRIMARY KEY (id)" +
+                    ")";
 
 
             var stmt = connection.prepareStatement(sql);
